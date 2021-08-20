@@ -1,0 +1,63 @@
+/* elements for all sections */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif; 
+}
+
+/* header section */
+.header {
+    min-height: 100vh;  /* want the viewport height to extend the full screen */
+    width: 100%;  /* using full width of page given */
+    /* background-image: linear-gradient(rgba(92, 93, 97, 0.7), rgba(92, 93, 97, 0.7)), url(images/homePageBackground.jpg); */
+    background-color: black;  /* temporary until image is acquired */
+    background-position: center;  /* want image in center of page */
+    background-size: cover;  /* extending image to cover full page */
+    position: relative;  /* positioning image according to flow of document */
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;  /* adds space around nav menu */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;  /* positions items side by side */
+    padding: 8px 12px;  /* adds space around items */
+    position: relative;
+}
+
+.nav-links ul li a {
+    /* color of links in nav menu */
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links ul li:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+/* footer section */
+.footer {
+    width: 100%;
+    background-color: aqua;
+}
+
