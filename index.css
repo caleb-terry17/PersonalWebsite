@@ -5,6 +5,20 @@
     font-family: 'Poppins', sans-serif; 
 }
 
+/* h1's */
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.row {
+    /* to make items into a resizable row */
+    margin-top: 5%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* header section */
 .header {
     min-height: 100vh;  /* want the viewport height to extend the full screen */
@@ -21,6 +35,10 @@ nav {
     padding: 2% 6%;  /* adds space around nav menu */
     justify-content: space-between;
     align-items: center;
+}
+
+nav .fa {
+    display: none;  /* to hide icons on smaller screen */
 }
 
 .nav-links {
@@ -45,7 +63,7 @@ nav {
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: #800000;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -55,9 +73,126 @@ nav {
     width: 100%;
 }
 
+.intro {
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.name {
+    color: #fff;
+    font-size: 120px;
+    text-align: center;
+}
+
+/* experience section */
+.experience {
+    width: 90%;  /* only want to take up 80% of screen */
+    margin: auto;  /* margin fits to page */
+    text-align: center;  /* move text to center */
+    padding-top: 100px; /* spacing between experience content and header */
+}
+
+.experience .row {
+    /* content specific to items in experience section */
+    flex-wrap: wrap;
+}
+
+.experience-col {
+    min-width: 50px;
+    flex-basis: 31%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.experience-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* projects section */
+.projects {
+    width: 90%;  /* only want to take up 80% of screen */
+    margin: auto;  /* margin fits to page */
+    text-align: center;  /* move text to center */
+    padding-top: 100px; /* spacing between experience content and header */
+}
+
 /* footer section */
 .footer {
     width: 100%;
     background-color: aqua;
 }
 
+/* what to do for smaller screens */
+@media(max-width: 900px) {
+    /* to display icons on smaller screen */
+    nav .fa {
+        position: absolute;
+        display: block;
+        color: #fff;
+        margin: 10px;
+        right: 5px;
+        top: 8px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    /* adding background for nav links */
+    .nav-links {
+        position: absolute;
+        background: #800000;
+        height: 100vh;  /* want background for links to be same height as rest of section */
+        width: 200px;
+        top: 0;
+        right: -200px;  /* initial placement is hidden from view */
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    /* bars icon */
+    .nav-links .fa {
+        position: absolute;
+        display: block;
+        color: #fff;
+        margin: 10px;
+        left: 5px;
+        top: 8px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    /* list item on smaller screen */
+    .nav-links ul {
+        padding: 30px;
+    }
+
+    /* changing nav links to blocked list from inline */
+    .nav-links ul li {
+        display: block;
+    }
+
+    /* need text to be smaller */
+    .intro {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 10%;
+    }
+    
+    .name {
+        color: #fff;
+        font-size: 55px;
+        text-align: center;
+    }
+
+    /* row items */
+    .row {
+        flex-direction: column;
+    }
+}

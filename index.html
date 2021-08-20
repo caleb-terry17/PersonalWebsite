@@ -18,22 +18,129 @@
     <!--header section-->
     <section class="header">
         <nav>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
+                <!--icon to hide menu on smaller screen-->
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
-                    <li><a href="">RESUME</a></li>
-                    <li><a href="">PROJECTS</a></li>
-                    <li><a href="">HACKATHONS</a></li>
-                    <li><a href="">EXPERIENCE</a></li>
-                    <li><a href="">GITHUB</a></li>
-                    <li><a href="">LINKEDIN</a></li>
+                    <li><a href="files/Caleb_Terry_Resume.pdf" target="_blank">RESUME</a></li>
+                    <li><a href="#experience">EXPERIENCE</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#hackathons">HACKATHONS</a></li>
+                    <li><a href="https://github.com/caleb-terry17" target="_blank">GITHUB</a></li>
+                    <li><a href="https://www.linkedin.com/in/caleb-terry-91a447196/" target="_blank">LINKEDIN</a></li>
                 </ul>
             </div>
+            <!--icon to show menu-->
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
+
+        <!--name and intro-->
+        <h2 class="intro">Howdy, I'm</h2>
+        <h1 class="name">Caleb Terry</h1>
+    </section> 
+
+    <!--experience section-->
+    <a name="experience"></a>  <!--link to shortcut to this section-->
+    <section class="experience">
+        <h1>EXPERIENCE</h1>
+        
+        <!--Texas A&M College of Engineering-->
+        <div class="row">
+            <div class="experience-col">
+                <h3>TEXAS A&M UNIVERSITY COLLEGE OF ENGINEERING</h3>
+                <h5>Peer Teacher</h5>
+                <p>Janurary 2021 - Present</p>
+                <p>College Station, Texas, United States</p>
+                <p>Answer questions from students on various topics and give assistance on homework problems across a multitude of Computer Science courses.</p>
+                
+                <br>
+
+                <h5>Student Assistant</h5>
+                <p>August 2020 - December 2020</p>
+                <p>College Station, Texas, United States</p>
+                <p>Assist Professor with answering student questions in lectures and help students on labs and homework assignments.</p>
+            </div>
+
+            <!--City of Longview-->
+            <div class="experience-col">
+                <h3>CITY OF LONGVIEW</h3>
+                <h5>Head Lifeguard</h5>
+                <p>June - August, 2020 - 2021</p>
+                <p>Longview, Texas, United States</p>
+                <p>Assist lifeguards throughout day in supervising Patrons to ensure they are being safe and using all facility equipment correctly.</p>
+                
+                <br>
+
+                <h5>Lifeguard</h5>
+                <p>June - August, 2018 - 2021</p>
+                <p>Longview, Texas, United States</p>
+                <p>Supervise Patrons to ensure they are being safe and using all facility equipment correctly. Also clean the facility at the end of the day.</p>
+            </div>
+
+            <!--Fastenal Company-->
+            <div class="experience-col">
+                <h3>FASTENAL COMPANY</h3>
+                <h5>Warehouse Laborer</h5>
+                <p>June 2021 - July 2021</p>
+                <p>Longview, Texas, United States</p>
+                <p>Organized warehouse and assisted sales associates on fulfilling orders.</p>
+            </div>
+
+            <!--Self-Employed-->
+            <div class="experience-col">
+                <h3>SELF-EMPLOYED</h3>
+                <h5>Private Tutor</h5>
+                <p>September 2020 - April 2021</p>
+                <p>College Station, Texas, United States</p>
+                <p>Meet with client to teach important ideas or principles they are struggling with and guide through homework assignments in Computer Science, Math, and Physics classes.</p>
+            </div>
+
+            <!--Pine Tree ISD-->
+            <div class="experience-col">
+                <h3>PINE TREE ISD</h3>
+                <h5>Technology Department Intern</h5>
+                <p>June 2020 - August 2020</p>
+                <p>Longview, Texas, United States</p>
+                <p>Setup new desktop computers adn Chromebooks. Ran cable in classrooms throughout school district buildings. Cleared old iPad's and Chromebooks then set up under new domain for school district.</p>
+            </div>
+        </div>
     </section>
+
+    <!--projects section-->
+    <a name="projects"></a>  <!--link to shortcut to projects section-->
+    <section class="projects">
+        <h1>PROJECTS</h1>
+
+        <div class="row">
+            <div class="projects-col">
+
+            </div>
+        </div>
+    </section>
+
+    <!--hackathons section-->
+    <a name="hackathons"></a>  <!--link to shortcut to hackathons section-->
 
     <!--footer section-->
     <section class="footer">
-        <!--need to add linked in and github icons with links to pages-->>
+        <!--need to add linked in and github icons with links to pages-->
     </section>
+
+    <!--JavaScript for toggle button on smaller screen-->
+    <script>
+        // getting id of nav links menu
+        var navLinks = document.getElementById("navLinks");
+
+        // function to hide menu
+        function hideMenu() {
+            navLinks.style.right = "-200px";
+        }
+
+        // function to show menu
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+    </script>
+
 </body>
 </html>
