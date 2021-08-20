@@ -116,11 +116,56 @@ nav .fa {
 
 /* projects section */
 .projects {
-    width: 90%;  /* only want to take up 80% of screen */
+    width: 80%;  /* only want to take up 80% of screen */
     margin: auto;  /* margin fits to page */
     text-align: center;  /* move text to center */
     padding-top: 100px; /* spacing between experience content and header */
 }
+
+.projects-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    /* this margin positions items in the projects-col div tag centered */
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.projects-col a {
+    color: black;
+    text-decoration: none;
+}
+
+.projects-col img {
+    width: 75%;
+    /* this margin positions each img in the projects-col div tag in the center of its space */
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 7%;
+}
+
+.layer:hover {
+    text-shadow: 1px 1px 5px #800000;
+    transition: 0.5s;
+}
+
+/*
+.layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer h3 {
+    
+}
+*/
 
 /* footer section */
 .footer {
@@ -194,5 +239,18 @@ nav .fa {
     /* row items */
     .row {
         flex-direction: column;
+    }
+
+    /* for text on projects boxes */
+    .layer h3 {
+        /* text will always appear on smaller screens */
+        width: 100%;
+        font-weight: 500;
+        color: #fff;
+        font-size: 26px;
+        bottom: 0;
+        left: 50%;
+        position: absolute;
+        opacity: 1;
     }
 }
