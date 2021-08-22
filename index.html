@@ -7,16 +7,28 @@
     <title>Caleb Terry</title>
     <meta name = "description" content = "Caleb Terry: Introduction Page">
     <link rel = "stylesheet" href = "index.css">
-    <!--poppins font for nav menu items-->
+    
+    <!--Bootstrap CDN: part of smaller menu pop up-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--fonts-->
+    <!--poppins font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-    <!--Bootstrap CDN: part of smaller menu pop up-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--howdy block font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&display=swap" rel="stylesheet">
+    <!--cursive name-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <!--header section-->
-    <section class="header">
+    <!--navigation menu-->
+    <div class="nav-menu" id="navMenu">
         <nav>
             <div class="nav-links" id="navLinks">
                 <!--icon to hide menu on smaller screen-->
@@ -32,8 +44,11 @@
             </div>
             <!--icon to show menu-->
             <i class="fa fa-bars" onclick="showMenu()"></i>
-        </nav>
+        </nav>    
+    </div>
 
+    <!--header section-->
+    <section class="header">
         <!--name and intro-->
         <h2 class="intro">Howdy, I'm</h2>
         <h1 class="name">Caleb Terry</h1>
@@ -113,13 +128,12 @@
 
         <div class="row">
             <div class="projects-col">
-                <div class="layer">
-                    <a href="https://github.com/caleb-terry17/MyList" target="_blank">
+                <a href="https://github.com/caleb-terry17/MyList" target="_blank">
+                    <img src="images/projectsMyList.jpg">
+                    <div class="layer">
                         <h3>MyList App</h3>
-
-                        <img src="images/projectsMyList.jpg">  <!--NEED TO ADD IMAGE OF MY LIST APP-->
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
@@ -131,11 +145,13 @@
 
         <div class="row">
             <div class="hackathons-col">
-                <div class="layer">
-                    <a href="https://devpost.com/software/comhand">
+                <a href="https://devpost.com/software/comhand" target="_blank">
+                    <img src="images/tamuHackLogo.png">
+                    <div class="layer">
                         <h3>COMHAND</h3>
-                    </a>
-                </div>
+                    </div>
+                    <h2>TAMUHack 2020</h2>
+                </a>
             </div>
         </div>
     </section>
@@ -157,20 +173,8 @@
     </section>
 
     <!--JavaScript for toggle button on smaller screen-->
-    <script>
-        // getting id of nav links menu
-        var navLinks = document.getElementById("navLinks");
-
-        // function to hide menu
-        function hideMenu() {
-            navLinks.style.right = "-200px";
-        }
-
-        // function to show menu
-        function showMenu() {
-            navLinks.style.right = "0";
-        }
-    </script>
+    <!--JavaScript for header to stay in place while scrolling-->
+    <script src="index.js"></script>
 
 </body>
 </html>

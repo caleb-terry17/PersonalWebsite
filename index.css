@@ -19,25 +19,47 @@ h1 {
     justify-content: space-between;
 }
 
-.layer:hover {
-    text-shadow: 1px 1px 5px #800000;
+/* layer */
+.layer {
+    background: transparent; 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     transition: 0.5s;
 }
 
-/* header section */
-.header {
-    min-height: 100vh;  /* want the viewport height to extend the full screen */
-    width: 100%;  /* using full width of page given */
-    /* background-image: linear-gradient(rgba(92, 93, 97, 0.7), rgba(92, 93, 97, 0.7)), url(images/homePageBackground.jpg); */
-    background-color: black;  /* temporary until image is acquired */
-    background-position: center;  /* want image in center of page */
-    background-size: cover;  /* extending image to cover full page */
-    position: relative;  /* positioning image according to flow of document */
+.layer h3 {
+    width: fit-content;
+    font-weight: 800;
+    color: black;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute; 
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    padding: 3px 3px;
+    background-color: rgba(158, 12, 12, 0.5);
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* navigation menu */
+.nav-menu {
+    z-index: 1;
 }
 
 nav {
+    width: 100%;
+    background-color: black;
     display: flex;
-    padding: 2% 6%;  /* adds space around nav menu */
     justify-content: space-between;
     align-items: center;
 }
@@ -47,6 +69,9 @@ nav .fa {
 }
 
 .nav-links {
+    padding-top: .75%;
+    padding-bottom: .75%;
+    padding-right: 3%;
     flex: 1;
     text-align: right;
 }
@@ -78,25 +103,58 @@ nav .fa {
     width: 100%;
 }
 
+/* to hold nav in place while scrolling */
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+  
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+    .sticky + .content {
+    padding-top: 102px;
+}
+
+/* header section */
+.header {
+    min-height: 100vh;  /* want the viewport height to extend the full screen */
+    width: 100%;  /* using full width of page given */
+    /* background-image: linear-gradient(rgba(92, 93, 97, 0.7), rgba(92, 93, 97, 0.7)), url(images/homePageBackground.jpg); */
+    background-color: black;  /* temporary until image is acquired */
+    background-position: center;  /* want image in center of page */
+    background-size: cover;  /* extending image to cover full page */
+    position: relative;  /* positioning image according to flow of document */
+}
+
 .intro {
     color: #fff;
     font-size: 50px;
     text-align: center;
-    margin-top: 10%;
+    padding-top: 10%;
+
+    /* block font */
+    font-family: 'Roboto', sans-serif;
 }
 
 .name {
     color: #fff;
     font-size: 120px;
     text-align: center;
+
+    /* cursive font */
+    font-family: 'Allison', cursive;
 }
 
 /* experience section */
 .experience {
-    width: 90%;  /* only want to take up 80% of screen */
+    width: 80%;  /* only want to take up 80% of screen */
     margin: auto;  /* margin fits to page */
     text-align: center;  /* move text to center */
-    padding-top: 100px; /* spacing between experience content and header */
+    padding-top: 130px; /* spacing between experience content and header */
+
+    /* background color */
+    /* background-color: #D2D2CF; */
 }
 
 .experience .row {
@@ -106,6 +164,7 @@ nav .fa {
 
 .experience-col {
     min-width: 50px;
+    max-width: 500px;
     flex-basis: 31%;
     background: #fff3f3;
     border-radius: 10px;
@@ -124,7 +183,10 @@ nav .fa {
     width: 80%;  /* only want to take up 80% of screen */
     margin: auto;  /* margin fits to page */
     text-align: center;  /* move text to center */
-    padding-top: 100px; /* spacing between experience content and header */
+    padding-top: 130px; /* spacing between experience content and header */
+
+    /* background color */
+    /* background-color: #D2D2CF; */
 }
 
 .projects-col {
@@ -144,7 +206,7 @@ nav .fa {
 }
 
 .projects-col img {
-    width: 75%;
+    width: 100%;
     /* this margin positions each img in the projects-col div tag in the center of its space */
     margin-left: auto;
     margin-right: auto;
@@ -156,8 +218,11 @@ nav .fa {
 .hackathons {
     width: 80%;
     margin: auto;
-    padding-top: 100px;
+    padding-top: 130px;
     text-align: center;
+
+    /* background color */
+    /* background-color: #D2D2CF; */
 }
 
 .hackathons-col {
@@ -252,7 +317,7 @@ nav .fa {
         color: #fff;
         font-size: 20px;
         text-align: center;
-        margin-top: 10%;
+        padding-top: 10%;
     }
     
     .name {
