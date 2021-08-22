@@ -1,3 +1,8 @@
+/* global elements */
+:root {
+    --primaryColor: #CD342E;  /* primary color for website */
+}
+
 /* elements for all sections */
 * {
     margin: 0;
@@ -46,7 +51,7 @@ h1 {
 
 .layer:hover h3 {
     padding: 3px 3px;
-    background-color: rgba(158, 12, 12, 0.5);
+    background-color: var(--primaryColor);
     bottom: 49%;
     opacity: 1;
 }
@@ -71,9 +76,13 @@ nav .fa {
 .nav-links {
     padding-top: .75%;
     padding-bottom: .75%;
-    padding-right: 3%;
     flex: 1;
     text-align: right;
+}
+
+.nav-links ul {
+    /* adding padding just on right side of text grouping */
+    padding-right: 3%;
 }
 
 .nav-links ul li {
@@ -93,7 +102,7 @@ nav .fa {
     content: '';
     width: 0%;
     height: 2px;
-    background: #800000;
+    background: var(--primaryColor);
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -152,9 +161,6 @@ nav .fa {
     margin: auto;  /* margin fits to page */
     text-align: center;  /* move text to center */
     padding-top: 130px; /* spacing between experience content and header */
-
-    /* background color */
-    /* background-color: #D2D2CF; */
 }
 
 .experience .row {
@@ -163,7 +169,7 @@ nav .fa {
 }
 
 .experience-col {
-    min-width: 50px;
+    min-width: 250px;
     max-width: 500px;
     flex-basis: 31%;
     background: #fff3f3;
@@ -175,7 +181,7 @@ nav .fa {
 }
 
 .experience-col:hover {
-    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* projects section */
@@ -184,9 +190,6 @@ nav .fa {
     margin: auto;  /* margin fits to page */
     text-align: center;  /* move text to center */
     padding-top: 130px; /* spacing between experience content and header */
-
-    /* background color */
-    /* background-color: #D2D2CF; */
 }
 
 .projects-col {
@@ -220,9 +223,6 @@ nav .fa {
     margin: auto;
     padding-top: 130px;
     text-align: center;
-
-    /* background color */
-    /* background-color: #D2D2CF; */
 }
 
 .hackathons-col {
@@ -260,11 +260,16 @@ nav .fa {
 }
 
 .icons .fa:hover {
-    color: #800000;
+    color: var(--primaryColor);
 }
 
 /* what to do for smaller screens */
-@media(max-width: 900px) {
+@media(max-width: 700px) {
+    /* bars icon */
+    .nav-menu .fa {
+        color: var(--primaryColor);
+    }
+
     /* to display icons on smaller screen */
     nav .fa {
         position: absolute;
@@ -275,22 +280,23 @@ nav .fa {
         top: 8px;
         font-size: 22px;
         cursor: pointer;
+        z-index: 2;  /* so that it will show the whole way through */
     }
 
     /* adding background for nav links */
     .nav-links {
         position: absolute;
-        background: #800000;
+        background: var(--primaryColor);
         height: 100vh;  /* want background for links to be same height as rest of section */
         width: 200px;
         top: 0;
         right: -200px;  /* initial placement is hidden from view */
         text-align: left;
-        z-index: 2;
+        z-index: 3;  /* need it to be more than the bars */
         transition: 1s;
     }
 
-    /* bars icon */
+    /* times (x) icon */
     .nav-links .fa {
         position: absolute;
         display: block;

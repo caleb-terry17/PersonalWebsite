@@ -1,6 +1,7 @@
 1. add bio section 
-2. find maroon color for main color 
-3. add tabs on every menu to navigate page
-4. experience max width on row
-5. mylist app hover color to blue
-6. whenever you click a link to goto a page, it starts a little below because of the header
+G. find maroon color for main color 
+G. add tabs on every menu to navigate page
+G. experience max width on row
+G. mylist app hover color to blue
+G. whenever you click a link to goto a page, it starts a little below because of the header
+7. fix smaller screen side menu
