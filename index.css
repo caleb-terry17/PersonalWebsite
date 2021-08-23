@@ -351,6 +351,15 @@ nav .fa {
     .header {
         background-image: url(images/headerBackgroundSmall.jpg);
     }
+
+    /* making text center in screen for smaller screens */
+    .name {
+        padding-right: 0;
+    }
+
+    .intro {
+        padding-right: 0;
+    }
 }
 
 /* devices with only a screen (no keyboard or mouse) */
