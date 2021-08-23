@@ -134,7 +134,7 @@ nav .fa {
 .header {
     min-height: 100vh;  /* want the viewport height to extend the full screen */
     width: 100%;  /* using full width of page given */
-    /* background-image: linear-gradient(rgba(92, 93, 97, 0.7), rgba(92, 93, 97, 0.7)), url(images/homePageBackground.jpg); */
+    background-image: /*linear-gradient(rgba(92, 93, 97, 0.2), rgba(92, 93, 97, 0.2)),*/ url(images/headerBackground.jpg);
     background-color: black;  /* temporary until image is acquired */
     background-position: center;  /* want image in center of page */
     background-size: cover;  /* extending image to cover full page */
@@ -338,5 +338,35 @@ nav .fa {
     /* row items */
     .row {
         flex-direction: column;
+    }
+}
+
+/* devices with only a screen (no keyboard or mouse) */
+@media only screen and (hover: none) and (pointer: coarse) {
+    /* making h3 labels on projects and hackathons always appear for table/phones */
+    /* layer */
+    .layer {
+        background: transparent; 
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .layer h3 {
+        width: fit-content;
+        font-weight: 800;
+        color: black;
+        background-color: var(--primaryColor);
+        font-size: 26px;
+        padding: 3px 3px;
+        bottom: 49%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute; 
+        border-radius: 10px;
+        opacity: 1;
+        transition: 0.5s;
     }
 }
