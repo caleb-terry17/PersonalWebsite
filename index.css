@@ -97,12 +97,6 @@ nav .fa {
     position: relative;
 }
 
-.nav-links ul li a {
-    /* color of links in nav menu */
-    color: #fff;
-    text-decoration: none;
-}
-
 .nav-links ul li:after {
     content: '';
     width: 0%;
@@ -115,6 +109,12 @@ nav .fa {
 
 .nav-links ul li:hover::after {
     width: 100%;
+}
+
+.nav-links ul li a {
+    /* color of links in nav menu */
+    color: #fff;
+    text-decoration: none;
 }
 
 /* to hold nav in place while scrolling */
@@ -183,7 +183,7 @@ nav .fa {
     flex-basis: 31%;
     background: #fff3f3;
     border-radius: 10px;
-    margin: 5px;
+    margin: 10px;
     padding: 20px 12px;
     box-sizing: border-box;
     transition: 0.5s;
@@ -277,7 +277,7 @@ nav .fa {
         color: var(--primaryColor);
     }
 
-    /* to display icons on smaller screen */
+    /* to display links on smaller screen */
     nav .fa {
         position: absolute;
         display: block;
@@ -295,9 +295,10 @@ nav .fa {
         position: absolute;
         background: var(--primaryColor);
         height: 100vh;  /* want background for links to be same height as rest of section */
-        width: 200px;
-        top: 0;
-        right: -200px;  /* initial placement is hidden from view */
+        width: 100%;
+        top: -100vh;  /* so that you cannot see the menu originally */
+        left: 0;  /* initial placement is hidden from view */
+        padding: 0;
         text-align: left;
         z-index: 3;  /* need it to be more than the bars */
         transition: 1s;
@@ -309,7 +310,7 @@ nav .fa {
         display: block;
         color: #fff;
         margin: 10px;
-        left: 5px;
+        right: 5px;
         top: 8px;
         font-size: 22px;
         cursor: pointer;
@@ -318,6 +319,7 @@ nav .fa {
     /* list item on smaller screen */
     .nav-links ul {
         padding: 30px;
+        text-align: center;
     }
 
     /* changing nav links to blocked list from inline */
@@ -325,7 +327,33 @@ nav .fa {
         display: block;
     }
 
-    /* need text to be smaller */
+    .nav-links ul li a {
+        font-size: 25px;
+        position: relative;
+    }
+
+    .nav-links ul li a::after {
+        content: '';
+        height: 2px;
+        width: 0;
+        background: black;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s;
+    }
+
+    .nav-links ul li a:hover::after {
+        width: 100%;
+    }
+
+    /* row items */
+    .row {
+        padding: 0;
+        flex-direction: column;
+    }
+
+    /* header: need text to be smaller */
     .intro {
         color: #fff;
         font-size: 20px;
@@ -339,10 +367,9 @@ nav .fa {
         text-align: center;
     }
 
-    /* row items */
-    .row {
-        padding: 0;
-        flex-direction: column;
+    /* experience */
+    .experience-col {
+        margin: 0;
     }
 }
 
@@ -365,6 +392,11 @@ nav .fa {
 
 /* devices with only a screen (no keyboard or mouse) */
 @media only screen and (hover: none) and (pointer: coarse) {
+    /* nav menu */
+    .nav-links ul li a:after {
+        width: 100%;
+    }
+
     /* making h3 labels on projects and hackathons always appear for table/phones */
     /* layer */
     .layer {

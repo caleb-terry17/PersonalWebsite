@@ -7,12 +7,12 @@ var navLinks = document.getElementById("navLinks");
 
 // function to hide menu
 function hideMenu() {
-    navLinks.style.right = "-200px";
+    navLinks.style.top = "-100vh";
 }
 
 // function to show menu
 function showMenu() {
-    navLinks.style.right = "0";
+    navLinks.style.top = "0";
 }
 
 ///////////////////
