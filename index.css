@@ -135,7 +135,7 @@ nav .fa {
     min-height: 100vh;  /* want the viewport height to extend the full screen */
     width: 100%;  /* using full width of page given */
     background-image: /*linear-gradient(rgba(92, 93, 97, 0.2), rgba(92, 93, 97, 0.2)),*/ url(images/headerBackground.jpg);
-    background-color: black;  /* temporary until image is acquired */
+    background-color: black;  /* in case image is too small */
     background-position: center;  /* want image in center of page */
     background-size: cover;  /* extending image to cover full page */
     position: relative;  /* positioning image according to flow of document */
@@ -147,6 +147,8 @@ nav .fa {
     text-align: center;
     padding-top: 10%;
 
+    padding-right: 32%;
+
     /* block font */
     font-family: 'Roboto', sans-serif;
 }
@@ -155,6 +157,8 @@ nav .fa {
     color: #fff;
     font-size: 120px;
     text-align: center;
+
+    padding-right: 32%;
 
     /* cursive font */
     font-family: 'Allison', cursive;
@@ -338,6 +342,14 @@ nav .fa {
     /* row items */
     .row {
         flex-direction: column;
+    }
+}
+
+/* what to do for extra small screens */
+@media(max-width: 500px) {
+    /* inserting smaller image */
+    .header {
+        background-image: url(images/headerBackgroundSmall.jpg);
     }
 }
 
