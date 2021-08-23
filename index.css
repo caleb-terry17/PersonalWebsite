@@ -341,6 +341,7 @@ nav .fa {
 
     /* row items */
     .row {
+        padding: 0;
         flex-direction: column;
     }
 }
