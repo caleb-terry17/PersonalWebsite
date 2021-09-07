@@ -50,7 +50,6 @@ a {
     transform: translateX(-50%);
     position: absolute; 
     border-radius: 10px;
-    opacity: 0;
     transition: 0.5s;
 }
 
@@ -58,7 +57,42 @@ a {
     padding: 3px 3px;
     background-color: var(--primaryColor);
     bottom: 49%;
+}
+
+.layer h4 {
+    width: fit-content;
+    font-weight: 500;
+    color: var(--primaryColor);
+    font-size: 20px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    text-decoration: underline;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.layer:hover h4 {
+    bottom: 25%;
     opacity: 1;
+}
+
+.layer p {
+    width: fit-content;
+    font-weight: 400;
+    color: black;
+    font-size: 20px;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    transition: 0.5s;
+}
+
+.layer:hover p {
+    color: var(--primaryColor);
+    bottom: 0;
 }
 
 /* navigation menu */
@@ -229,7 +263,7 @@ nav .fa {
 .hackathons {
     width: 80%;
     margin: auto;
-    padding-top: 130px;
+    padding: 130px 0;
     text-align: center;
 }
 
