@@ -35,9 +35,10 @@ a {
     height: 100%;
     width: 100%;
     position: absolute;
+    /* position: relative; */
     top: 0;
     left: 0;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
 
 .layer h3 {
@@ -53,14 +54,19 @@ a {
     transition: 0.5s;
 }
 
+.hackathons .layer h3 {
+    /* need extra spacing on bottom */
+    bottom: -75px;
+}
+
 .layer:hover h3 {
     padding: 3px 3px;
     background-color: var(--primaryColor);
-    bottom: 49%;
+    bottom: 40%;
 }
 
 .layer h4 {
-    width: fit-content;
+    width: 100%;
     font-weight: 500;
     color: var(--primaryColor);
     font-size: 20px;
@@ -69,30 +75,35 @@ a {
     transform: translateX(-50%);
     position: absolute;
     text-decoration: underline;
-    transition: 0.5s;
-    opacity: 0;
+    /* transition: 0.5s; */
+    /* opacity: 0; */
 }
 
-.layer:hover h4 {
-    bottom: 25%;
-    opacity: 1;
+.hackathons .layer h4 {
+    /* need extra spacing on bottom */
+    bottom: -105px;
 }
 
 .layer p {
-    width: fit-content;
+    width: 100%;
     font-weight: 400;
     color: black;
     font-size: 20px;
-    bottom: -100px;
+    bottom: -135px;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    transition: 0.5s;
+    /* transition: 0.5s; */
+}
+
+.hackathons .layer p {
+    /* need extra spacing on bottom */
+    bottom: -205px;
 }
 
 .layer:hover p {
     color: var(--primaryColor);
-    bottom: 0;
+    /* bottom: 0; */
 }
 
 /* navigation menu */
@@ -232,7 +243,7 @@ nav .fa {
     width: 80%;  /* only want to take up 80% of screen */
     margin: auto;  /* margin fits to page */
     text-align: center;  /* move text to center */
-    padding-top: 130px; /* spacing between experience content and header */
+    padding: 130px 0; /* spacing between experience content and header */
 }
 
 .projects-col {
@@ -263,7 +274,8 @@ nav .fa {
 .hackathons {
     width: 80%;
     margin: auto;
-    padding: 130px 0;
+    padding-top: 130px;
+    padding-bottom: 180px;
     text-align: center;
 }
 
@@ -403,7 +415,11 @@ nav .fa {
 
     /* experience */
     .experience-col {
-        margin: 0;
+        margin: 20px 0;
+    }
+
+    .projects-col {
+        margin: 100px 0;
     }
 }
 
